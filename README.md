@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # HomeSwapApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
@@ -25,3 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+# home-swap-app
+Ironhack Project #3: MEAN Full Stack Application (Only Contains Angular/Front End code)
+>>>>>>> b59c4eb29a566670fea63648dc93fa10cf4cbc93
