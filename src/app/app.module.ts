@@ -31,7 +31,9 @@ import { LoginComponent } from './auth/login/login.component';
     AddTravelComponent,
     EditTravelComponent,
     ResultsComponent,
-    MatchesComponent
+    MatchesComponent,
+    SignupComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
