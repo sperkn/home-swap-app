@@ -10,26 +10,19 @@ import { AppRoutingModule } from './/app-routing.module';
 
 //Components Imports
 import { AppComponent } from './app.component';
-<<<<<<< HEAD
-import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddHomeComponent } from './add-home/add-home.component';
-=======
 import { SignupComponent } from './auth/signup/signup.component';
 import { LoginComponent } from './auth/login/login.component';
->>>>>>> dev
 
 @NgModule({
   declarations: [
     AppComponent,
-<<<<<<< HEAD
     LoginComponent,
     DashboardComponent,
-    AddHomeComponent
-=======
+    AddHomeComponent,
     SignupComponent,
     LoginComponent
->>>>>>> dev
   ],
   imports: [
     BrowserModule,
