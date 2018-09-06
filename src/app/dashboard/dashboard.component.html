@@ -1,3 +1,15 @@
-<p>
-  dashboard works!
-</p>
+<!-- home card -->
+<h3>My Home</h3>
+<div class="main_container">
+  <div *ngFor="let home of homes">
+    <!-- <img [src]="home.image" /> -->
+    <p> {{ home.address.street }} </p>
+    <p> {{ home.address.city}} </p>
+    <p> {{ home.address.zipCode}} </p>
+    <!-- <a [routerLink]="['home']"> View Details </a> -->
+    <a [routerLink]="['edit-home', home._id]">Edit</a>
+  </div>
+  <button><a [routerLink]="['add-home']"></a>Add Home</button>
+</div>
+
+
