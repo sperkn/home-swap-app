@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-// import { SignUpComponent } from './signup/signup.component';
-import { LoginComponent } from './login/login.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { LoginComponent } from './auth/login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddHomeComponent } from './add-home/add-home.component';
 import { EditHomeComponent } from './edit-home/edit-home.component';
@@ -12,7 +13,8 @@ import { ResultsComponent } from './results/results.component';
 import { MatchesComponent } from './matches/matches.component';
 
 const routes: Routes = [
-  // { path: 'signup', component: SignUpComponent },
+  { path: '', component: LandingPageComponent, pathMatch: 'full' },
+  { path: 'signup', component: SignupComponent },
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'add-home', component: AddHomeComponent },
@@ -21,6 +23,7 @@ const routes: Routes = [
   { path: 'edit-travel', component: EditTravelComponent },
   { path: 'results', component: ResultsComponent },
   { path: 'matches', component: MatchesComponent },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

@@ -1,0 +1,72 @@
+#main_intro_section {
+  height: 100vh;
+  width: 100vw;
+  /* width: 100%; */
+  background-image: url(/src/assets/images/adventureballshaped.jpg);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  /* text-align: center; */
+}
+
+#main_intro_nav {
+  height: 33vh;
+}
+
+#main_intro_text {
+  height: 34vh;
+}
+
+#main_intro_footer {
+  height: 33vh;
+}
+
+.nav_padding {
+  padding-top: .75em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+/* .toggler_icon_color {
+  color: #fff;
+} */
+
+.main_intro_logo {
+  color: #fff;
+  font-family: CircularStd;
+  font-weight: bold;
+}
+
+.main_intro_link {
+  color: #fff;
+  font-family: CircularStd;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.main_intro_slogan {
+  color: #fff;
+  font-family: CircularStd;
+}
+
+.main_intro_bold {
+  color: #000;
+  font-family: CircularStd;
+  font-weight: bold;
+}
+
+/* .scroll_arrow_border {
+  object-fit: cover;
+  border-radius:50%;
+  width: 1.5em;
+  height: 1.5em;
+  border: .2em solid #fff;
+  padding: .3em;
+} */
+
+#main_middle_section {
+  height: 100vh;
+}
