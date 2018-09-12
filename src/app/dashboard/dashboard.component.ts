@@ -10,8 +10,7 @@ import { HomeRoutesService } from "../services/home-routes.service";
   providers: [HomeRoutesService]
 })
 export class DashboardComponent implements OnInit {
-  // homes:any=[]
-  // travels: any;
+  homes:any=[]
   travels: any = [];
 
   constructor(
@@ -20,23 +19,15 @@ export class DashboardComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    // console.log(this.homes);
-    // this.home.getMyHome()
-    //   .subscribe((homes) => {
-    //     this.homes = homes;
-    //   });
-    this.getTravel();
-  }
+    this.home.getMyHome()
+      .subscribe((homes) => {
+        this.homes = homes;
+      });
 
-  getTravel() {
-    this.travel.getTravel().subscribe(
-      data => {
-        this.travels = data;
-        this.travels = Array.of(this.travels);
-      },
-      err => console.error(err),
-      () => console.log(this.travels)
-    );
+    this.travel.getTravel()
+      .subscribe((travels) => {
+        this.travels = travels;
+      });
   }
 
   // addHome() {

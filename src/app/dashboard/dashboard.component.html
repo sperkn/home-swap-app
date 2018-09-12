@@ -1,23 +1,23 @@
 <!-- home card -->
-<!-- <h3>My Home</h3>
+<h3>My Home</h3>
 <div class="main_container">
-  <div *ngFor="let home of homes"> -->
-    <!-- <img [src]="home.image" /> -->
-    <!-- <p> {{ home.address.street }} </p>
+  <div *ngFor="let home of homes">
+    <img [src]="home.image" />
+    <p> {{ home.address.street }} </p>
     <p> {{ home.address.city}} </p>
-    <p> {{ home.address.zipCode}} </p> -->
-    <!-- <a [routerLink]="['home']"> View Details </a> -->
-    <!-- <a [routerLink]="['edit-home', home._id]">Edit</a>
+    <p> {{ home.address.zipCode}} </p>
+    <a [routerLink]="['home']"> View Details </a>
+    <a [routerLink]="['edit-home', home._id]">Edit</a>
   </div>
   <button><a [routerLink]="['add-home']"></a>Add Home</button>
 </div>
-  <a routerLink="/add-home"><button>+</button></a> -->
+  <a routerLink="/add-home"><button>+</button></a>
 
 
   <h3>My Travels</h3>
-  <div class="main_container">
+  <div class="travel-container">
     <div *ngFor="let travel of travels">
-      <p> {{ travel.beginDate }} </p>
-      <p> {{ travel.beginDate}} </p>
+      <p>Start Date: {{ travel.beginDate }} End Date: {{ travel.beginDate}}</p>
     </div>
+    <a routerLink="/add-travel"><button>+</button></a>
   </div>
