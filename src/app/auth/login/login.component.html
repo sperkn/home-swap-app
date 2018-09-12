@@ -1,3 +1,4 @@
+<div *ngIf="!user">
 <form>
   <h2> Login </h2>
   <label> Username </label>
@@ -8,12 +9,15 @@
   <br>
   <button type="button" (click)="login()"> Login! </button>
 </form>
+<p>Don't have an account? <a routerLink="/signup">Sign up</a>.</p>
+</div>
 
 <div *ngIf="user">
   <h2> You are now logged in as {{ user.username }} {{user._id}} </h2>
   <button (click)="logout()"> logout </button>
+  <app-dashboard></app-dashboard>
 </div>
 
 <p class="error"> {{ error }} </p>
 
-<h1>End of Login</h1>
+<!-- <h1>End of Login</h1> -->

@@ -21,12 +21,9 @@ export class TravelRoutesService {
         catchError(this.handleError)
       );
   }
+
   getTravel() {
-    return this.http
-      .get(`${this.mainURL}/travel`, { withCredentials: true })
-      .pipe(
-        map(res => res.json()),
-        catchError(this.handleError)
-      );
+    return this.http.get(`${this.mainURL}/travel`, { withCredentials: true })
+      .pipe(map((res) => res.json()));
   }
 }

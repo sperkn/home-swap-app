@@ -3,10 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from "@angular/forms";
+import { FileUploadModule } from "ng2-file-upload";
 
 //Services & Routing Imports
-import { AuthRoutesService } from './services/auth-routes.service'
+import { AuthRoutesService } from './services/auth-routes.service';
+import { HomeRoutesService } from './services/home-routes.service';
 import { AppRoutingModule } from './/app-routing.module';
+import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 //Components Imports
 import { AppComponent } from './app.component';
@@ -19,6 +22,7 @@ import { ResultsComponent } from './results/results.component';
 import { MatchesComponent } from './matches/matches.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { LoginComponent } from './auth/login/login.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -32,16 +36,17 @@ import { LoginComponent } from './auth/login/login.component';
     EditTravelComponent,
     ResultsComponent,
     MatchesComponent,
-    SignupComponent,
-    LoginComponent
+    LandingPageComponent,
   ],
   imports: [
     BrowserModule,
     HttpModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    FileUploadModule,
+    NgxPageScrollModule
   ],
-  providers: [AuthRoutesService],
+  providers: [AuthRoutesService, HomeRoutesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
