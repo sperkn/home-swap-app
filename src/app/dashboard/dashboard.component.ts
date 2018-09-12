@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TravelRoutesService } from "../services/travel-routes.service";
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private travel: TravelRoutesService) {}
+
+  travels :any;
 
   ngOnInit() {
-  }
+    this.travel.getTravel()
+    .subscribe((travels) => {
+      this.travels = travels;
+    });  }
 
 }

@@ -39,6 +39,7 @@ import { LoginComponent } from './auth/login/login.component';
     BrowserModule,
     HttpModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [AuthRoutesService],
   bootstrap: [AppComponent]

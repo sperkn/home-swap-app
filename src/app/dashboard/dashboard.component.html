@@ -13,3 +13,9 @@
 </div>
 
 
+<h3>My Travels</h3>
+{{travels}}
+<div *ngFor="let travel of travels">
+  <p> {{ travel.beginDate }} </p>
+  <p> {{ travel.endDate}} </p>
+</div>
