@@ -2,7 +2,7 @@
 <h3>My Home</h3>
 <div class="main_container">
   <div *ngFor="let home of homes">
-    <!-- <img [src]="home.image" /> -->
+    <img [src]="home.images[0].url" />
     <p> {{ home.address.street }} </p>
     <p> {{ home.address.city}} </p>
     <p> {{ home.address.zipCode}} </p>
