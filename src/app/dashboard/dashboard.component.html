@@ -6,8 +6,18 @@
     <p> {{ home.address.street }} </p>
     <p> {{ home.address.city}} </p>
     <p> {{ home.address.zipCode}} </p>
-    <!-- <a [routerLink]="['home']"> View Details </a> -->
+    <a [routerLink]="['home']"> View Details </a>
     <a [routerLink]="['edit-home', home._id]">Edit</a>
   </div>
   <a routerLink="/add-home"><button>+</button></a>
 </div>
+  
+
+
+  <h3>My Travels</h3>
+  <div class="travel-container">
+    <div *ngFor="let travel of travels">
+      <p>Start Date: {{ travel.beginDate }} End Date: {{ travel.beginDate}}</p>
+    </div>
+    <a routerLink="/add-travel"><button>+</button></a>
+  </div>

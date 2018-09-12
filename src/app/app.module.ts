@@ -44,7 +44,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     AppRoutingModule,
     FormsModule,
     FileUploadModule,
-    NgxPageScrollModule,
+    NgxPageScrollModule
   ],
   providers: [AuthRoutesService, HomeRoutesService],
   bootstrap: [AppComponent]
