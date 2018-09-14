@@ -1,11 +1,7 @@
 <h1> Add a new home </h1>
 <button><a routerLink="/dashboard"> Back to Dashboard</a></button>
 
- <div>
-  <input type="file" name="file" ng2FileSelect [uploader]="uploader" multiple />
-</div>
-<h3>Upload queue</h3>
-<p>Queue length: {{ uploader?.queue?.length }}</p>
+
 
 <form>
   <fieldset>
@@ -139,6 +135,11 @@
 
   </fieldset>
  
-
+  <div>
+      <input type="file" name="file" ng2FileSelect [uploader]="uploader" multiple />
+    </div>
+    <h3>Upload queue</h3>
+    <p>Queue length: {{ uploader?.queue?.length }}</p>
+    
   <button (click)="submit()"> Add Home </button>
 </form>

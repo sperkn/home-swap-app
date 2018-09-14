@@ -2,16 +2,20 @@
 <h3>My Home</h3>
 <div class="main_container">
   <div *ngFor="let home of homes">
-    <img [src]="home.image" />
+    <div *ngFor="let image of home.images">
+      <img [src]="image.url" />
+    </div>
     <p> {{ home.address.street }} </p>
     <p> {{ home.address.city}} </p>
+    <p>{{ home.address.state}} </p>
     <p> {{ home.address.zipCode}} </p>
+    <p> {{ home.address.country}} </p>
     <a [routerLink]="['home']"> View Details </a>
     <a [routerLink]="['edit-home', home._id]">Edit</a>
   </div>
-  <button><a [routerLink]="['add-home']"></a>Add Home</button>
+  <a routerLink="/add-home"><button>+</button></a>
 </div>
-<a routerLink="/add-home"><button>+</button></a>
+  
 
 
 <h3>My Travels</h3>
