@@ -14,6 +14,7 @@ export class DashboardComponent implements OnInit {
   homes: any = [];
   travels: any = [];
   connections: any = [];
+  userId: any;
 
   constructor(
     private travel: TravelRoutesService,
@@ -23,6 +24,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.home.getMyHome().subscribe(homes => {
+      this.userId = homes[0].owner;
       this.homes = homes;
     });
 
@@ -44,6 +46,7 @@ export class DashboardComponent implements OnInit {
       });
     });
   }
+
 
   // addHome() {
 

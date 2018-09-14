@@ -31,4 +31,26 @@ export class ConnectionRoutesService {
       .get(`${this.mainURL}/connection`, { withCredentials: true })
       .pipe(map(res => res.json()));
   }
+
+  getConnectionDetails(connectionId) {
+    return this.http
+      .get(`${this.mainURL}/connection/${connectionId}`, { withCredentials: true })
+      .pipe(map(res => res.json()));
+  }
+
+  acceptConnection(connectionId){
+    return this.http.put(`${this.mainURL}/connection/accept`, connectionId, { withCredentials: true })
+    .pipe(map((res) => res.json()));
+  }
+
+  declineConnection(connectionId){
+    return this.http.put(`${this.mainURL}/connection/decline`, connectionId, { withCredentials: true })
+    .pipe(map((res) => res.json()));
+  }
+  
+  privateInfo(userId){
+    return this.http.get(`${this.mainURL}/confirmed-data/${userId}`, { withCredentials: true })
+    .pipe(map((res) => res.json()));
+  }
 }
+
