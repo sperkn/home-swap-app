@@ -10,7 +10,7 @@ import { HomeRoutesService } from "../services/home-routes.service";
   providers: [HomeRoutesService]
 })
 export class DashboardComponent implements OnInit {
-  homes:any=[]
+  homes:any=[];
   travels: any = [];
 
   constructor(
