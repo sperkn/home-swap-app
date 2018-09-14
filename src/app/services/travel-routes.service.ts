@@ -24,6 +24,43 @@ export class TravelRoutesService {
 
   getTravel() {
     return this.http.get(`${this.mainURL}/travel`, { withCredentials: true })
+      .pipe(map((res:any) => {
+        return res.json()}));
+  }
+
+  travelDetail(travelId) {
+    return this.http.get(`${this.mainURL}/travel/${travelId}`, { withCredentials: true })
       .pipe(map((res) => res.json()));
   }
+
+  editTravel(editedTravel, travelId) {
+    return this.http.put(`${this.mainURL}/travel/${travelId}`, editedTravel, { withCredentials: true })
+      .pipe(map((res) => res.json()));
+  }
+
+  deleteTravel(travelId) {
+    return this.http.delete(`${this.mainURL}/travel/${travelId}`, { withCredentials: true })
+      .pipe(map((res) => res.json()));
+  }
+
+  getResults(travelId) {
+    return this.http.get(`${this.mainURL}/travel/results/${travelId}`, { withCredentials: true })
+      .pipe(map((res) => res.json()));
+  }
+
+  like(userTravelId, otherTravelId) {
+    return this.http.put(`${this.mainURL}/travel/like/${otherTravelId}`, userTravelId, { withCredentials: true })
+      .pipe(map((res) => res.json()));
+  }
+
+  dislike(userTravelId, otherTravelId) {
+    return this.http.put(`${this.mainURL}/travel/dislike/${otherTravelId}`, userTravelId, { withCredentials: true })
+      .pipe(map((res) => res.json()));
+  }
+
+  checkMatch(travelId, likedId) {
+    return this.http.get(`${this.mainURL}/travel/${travelId}/matchcheck/${likedId}`, { withCredentials: true })
+      .pipe(map((res) => res.json()));
+  }
+
 }

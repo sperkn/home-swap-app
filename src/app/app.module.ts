@@ -8,7 +8,7 @@ import { FileUploadModule } from "ng2-file-upload";
 //Services & Routing Imports
 import { AuthRoutesService } from './services/auth-routes.service';
 import { HomeRoutesService } from './services/home-routes.service';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 //Components Imports
