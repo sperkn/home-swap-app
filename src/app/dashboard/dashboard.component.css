@@ -29,6 +29,11 @@ border-radius: 10px;
   /* background: rgb(28, 184, 65); this is a green */
 }
 
+.button-dislike {
+  background: #FF0000;
+  /* background: rgb(28, 184, 65); this is a green */
+}
+
 .button-small {
   font-size: 85%;
   border-radius: .25em;
@@ -58,4 +63,24 @@ img {
 
 .inline_flex {
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  /* align-content: center; */
 }
+
+.grow_flex {
+  flex-grow: 1;
+}
+
+/* *****CONNECTIONS STYLING***** */
+#my_connections_section {
+  height: 40vh;
+}
+
+#my_connection_header {
+  background-color: #d9d9d9;
+  padding: .5em 0;
+  align-items: center;
+  /* border-radius: 1em 1em 0 0; */
+}
+

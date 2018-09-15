@@ -47,6 +47,7 @@
             <div class="pure-u-1-4 pure-u-lg-1-4 pure-u-xl-1-4">
               <div class="pure-g">
                 <div class="pure-u-1">
+                  <!-- <h4></h4> -->
                   <p> {{ home.address.street }} </p>
                 </div>
               </div>
@@ -88,6 +89,8 @@
 
   </div>
 
+  <!-- ***Travel Requests SECTION*** -->
+
   <div *ngIf="homes.length > 0">
     <div id="my_request_section">
 
@@ -119,11 +122,88 @@
           <!-- Begin SECOND ROW for TRAVEL REQUEST DATA -->
           <div id="my_home_data" class="pure-g">
             <div *ngFor="let travel of travels">
-              <p>Start Date: {{ travel.beginDate | date }} End Date: {{ travel.beginDate | date }}
-                <a [routerLink]="['../edit-travel', travel._id]">Edit</a>
+              <div class="pure-u-1 inline_flex">
+                <div class="pure-u-6-12 grow_flex">
+                  <p>Start Date: {{ travel.beginDate | date }} End Date: {{ travel.endDate | date }}</p>
+                </div>
+                <div class="pure-u-1-3 grow_flex"><a [routerLink]="['../edit-travel', travel._id]">Edit</a></div>
+                <div class="pure-u-1-3 grow_flex"> <a [routerLink]="['../results', travel._id]">Results</a></div>
+                <div class="pure-u-1-3 grow_flex"> <button (click)="deleteTravel(travel._id)">Delete</button></div>
+                <!-- <p>Start Date: {{ travel.beginDate | date }} End Date: {{ travel.endDate | date }} -->
+                <!-- <a [routerLink]="['../edit-travel', travel._id]">Edit</a>
                 <a [routerLink]="['../results', travel._id]">Results</a>
-                <button (click)="deleteTravel(travel._id)">Delete</button>
-              </p>
+                <button (click)="deleteTravel(travel._id)">Delete</button> -->
+                <!-- </p> -->
+              </div>
+            </div>
+          </div>
+          <!-- END SECOND ROW FOR PIC & DATA -->
+
+
+
+
+        </div>
+
+        <div class="pure-u-3-24 pure-u-lg-3-24 pure-u-xl-3-24 home_container_spacing">
+          <!-- EMPTY ON PURPOSE -->
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- *** END Travel Requests SECTION*** -->
+
+  <!-- *** BEGIN CONNECTIONS SECTION*** -->
+
+  <div *ngIf="connections.length > 0">
+    <div id="my_connections_section">
+
+      <div class="pure-g">
+
+        <div class="pure-u-3-24 pure-u-lg-3-24 pure-u-xl-3-24 home_container_spacing"></div>
+
+        <div class="pure-u-18-24 pure-u-lg-18-24 pure-u-xl-18-24 home_container_spacing">
+          <!-- BEGIN header row/1st row in main container for user travel reqs  -->
+          <div id="my_connection_header" class="pure-g">
+            <div class="pure-u-2-24 pure-u-lg-2-24 pure-u-xl-2-24">
+              <!-- EMPTY ON PURPOSE -->
+            </div>
+            <div class="pure-u-21-24 pure-u-lg-21-24 pure-u-xl-21-24">
+              <h3>My Connections</h3>
+            </div>
+            <!-- <div class="pure-u-4-24 pure-u-lg-4-24 pure-u-xl-4-24">
+              <button class="button-success button-small pure-button" routerLink="/add-travel">
+                <i class="fas fa-plus-circle"></i>
+                Add Request
+              </button>
+            </div> -->
+            <div class="pure-u-1-24 pure-u-lg-1-24 pure-u-xl-1-24">
+              <!-- EMPTY ON PURPOSE -->
+            </div>
+          </div>
+          <!-- END header row/1st row in main container for user travel requests  -->
+
+          <!-- Begin SECOND ROW for TRAVEL REQUEST DATA -->
+          <div id="my_connection_data" class="pure-g">
+            <div *ngFor="let connection of connections">
+              <div class="pure-u-1">
+              <div *ngIf="connection.active == true ">
+                <div *ngIf="connection.userRequest1.user === userId ">
+                  <a [routerLink]="['/matches', connection.userRequest2._id, connection._id]">Start Date:
+                    {{connection.userRequest1.beginDate
+                    | date }}
+                    End Date: {{connection.userRequest1.endDate | date }}</a>
+                </div>
+                <div *ngIf="connection.userRequest2.user === userId ">
+                  <a [routerLink]="['/matches', connection.userRequest1._id, connection._id]">Start Date:
+                    {{connection.userRequest2.beginDate
+                    | date }}
+                    End Date: {{connection.userRequest2.endDate | date }}</a>
+                </div>
+              </div>
+            </div>
             </div>
           </div>
           <!-- END SECOND ROW FOR PIC & DATA -->
@@ -143,51 +223,44 @@
   </div>
 
 
+
+
+
+
+
+
+  <!-- *** END CONNECTIONS SECTION*** -->
+
+
+
 </div>
 
 
 
 <!-- </div> -->
 
-<!-- BEGIN travel requests section -->
-<!-- <div *ngIf="homes.length > 0">
-    <h3>My Travels</h3>
-    <div class="travel-container">
-      <div *ngFor="let travel of travels">
-        <p>Start Date: {{ travel.beginDate | date }} End Date: {{ travel.beginDate | date }}
-          <a [routerLink]="['../edit-travel', travel._id]">Edit</a>
-          <a [routerLink]="['../results', travel._id]">Results</a>
-          <button (click)="deleteTravel(travel._id)">Delete</button>
-        </p>
-      </div>
-      <a [routerLink]="['../add-travel']">Add Travel</a>
-    </div>
-  </div> -->
-
-<!-- END travel requests section -->
-
 <!-- BEGIN CONNECTIONS SECTION -->
 <!-- <div *ngIf="connections.length > 0">
-    <h3>My Matches</h3>
-    <div class="matches-container">
-      <div *ngFor="let connection of connections">
-        <div *ngIf="connection.active == true ">
-          <div *ngIf="connection.userRequest1.user === userId ">
-            <a [routerLink]="['../matches', connection.userRequest2._id, connection._id]">Start Date:
-              {{connection.userRequest1.beginDate
-              | date }}
-              End Date: {{connection.userRequest1.endDate | date }}</a>
-          </div>
-          <div *ngIf="connection.userRequest2.user === userId ">
-            <a [routerLink]="['../matches', connection.userRequest1._id, connection._id]">Start Date:
-              {{connection.userRequest2.beginDate
-              | date }}
-              End Date: {{connection.userRequest2.endDate | date }}</a>
-          </div>
+  <h3>My Matches</h3>
+  <div class="matches-container">
+    <div *ngFor="let connection of connections">
+      <div *ngIf="connection.active == true ">
+        <div *ngIf="connection.userRequest1.user === userId ">
+          <a [routerLink]="['../matches', connection.userRequest2._id, connection._id]">Start Date:
+            {{connection.userRequest1.beginDate
+            | date }}
+            End Date: {{connection.userRequest1.endDate | date }}</a>
+        </div>
+        <div *ngIf="connection.userRequest2.user === userId ">
+          <a [routerLink]="['../matches', connection.userRequest1._id, connection._id]">Start Date:
+            {{connection.userRequest2.beginDate
+            | date }}
+            End Date: {{connection.userRequest2.endDate | date }}</a>
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
+</div> -->
 
 <!-- END CONNECTIONS SECTION -->
 
