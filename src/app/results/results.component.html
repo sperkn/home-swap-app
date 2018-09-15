@@ -1,8 +1,15 @@
+<app-navbar></app-navbar>
+
 <h3>My Results</h3>
 <div class="results-container">
 <div class="results-card" *ngFor="let result of results">
     <p>Travel ID: {{result._id}}</p>
     <button (click)="like(result._id)"> Like </button>
+    <button class="button-success pure-button">
+        <i class="fa fa-cog"></i>
+        Settings
+    </button>
+    <i class="fas fa-check-square"></i>
     <button (click)="dislike(result._id)"> Dislike </button>
   </div>
 

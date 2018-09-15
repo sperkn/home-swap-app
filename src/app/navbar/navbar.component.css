@@ -1,0 +1,113 @@
+#nav-bar {
+  height: 3.5em;
+  background-color: #006392;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+/* .main_intro_logo {
+  color: #fff;
+  font-family: CircularStd;
+  font-weight: bold;
+} */
+
+#logo_login {
+  color: #fff;
+  /* padding-left: 1.5em; */
+  font-weight: bold;
+}
+
+.main_intro_link {
+  color: #fff;
+  font-family: CircularStd;
+  font-weight: bold;
+}
+
+.center_items {
+  text-align: center;
+}
+
+/* .layout_items {
+  padding-top: 1.3em;
+} */
+
+.right-items {
+  text-align: right;
+  /* padding-top: 1.0em; */
+}
+
+.center-items {
+  text-align: center;
+  /* align-items: center; */
+  /* padding-top: 1.0em; */
+}
+
+nav li {
+  list-style-type: none;
+}
+
+header a {
+ text-decoration: none;
+ color: #fff;
+ /* display: block;
+ padding: 1em; */
+}
+
+nav img {
+ display: block;
+ padding: 1em;
+}
+
+#avatar-profile {
+  object-fit: cover;
+  border-radius:50%;
+  width: 2em;
+  height: 2em;
+  border: .1em solid #fff;
+}
+
+.dropbtn-nav {
+ background-color: #4F86C6;
+ color: white;
+ padding: 16px;
+ font-size: 16px;
+ border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown-nav {
+ position: relative;
+ /* display: inline-block; */
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content-nav {
+ display: none;
+ position: absolute;
+ background-color: #f1f1f1;
+ min-width: 160px;
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content-nav a {
+ color: black;
+ padding: 12px 16px;
+ text-decoration: none;
+ display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content-nav a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown-nav:hover .dropdown-content-nav {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown-nav:hover .dropbtn-nav {background-color: #3e8e41;}

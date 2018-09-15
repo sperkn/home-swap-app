@@ -23,6 +23,7 @@ import { MatchesComponent } from './matches/matches.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { LoginComponent } from './auth/login/login.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     ResultsComponent,
     MatchesComponent,
     LandingPageComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
