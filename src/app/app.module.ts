@@ -1,28 +1,29 @@
 //Angular Imports
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { HttpModule } from "@angular/http";
 import { FormsModule } from "@angular/forms";
 import { FileUploadModule } from "ng2-file-upload";
 
 //Services & Routing Imports
-import { AuthRoutesService } from './services/auth-routes.service';
-import { HomeRoutesService } from './services/home-routes.service';
-import { AppRoutingModule } from './app-routing.module';
-import { NgxPageScrollModule } from 'ngx-page-scroll';
+import { AuthRoutesService } from "./services/auth-routes.service";
+import { HomeRoutesService } from "./services/home-routes.service";
+import { AppRoutingModule } from "./app-routing.module";
+import { NgxPageScrollModule } from "ngx-page-scroll";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 //Components Imports
-import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { AddHomeComponent } from './add-home/add-home.component';
-import { EditHomeComponent } from './edit-home/edit-home.component';
-import { AddTravelComponent } from './add-travel/add-travel.component';
-import { EditTravelComponent } from './edit-travel/edit-travel.component';
-import { ResultsComponent } from './results/results.component';
-import { MatchesComponent } from './matches/matches.component';
-import { SignupComponent } from './auth/signup/signup.component';
-import { LoginComponent } from './auth/login/login.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
+import { AppComponent } from "./app.component";
+import { DashboardComponent } from "./dashboard/dashboard.component";
+import { AddHomeComponent } from "./add-home/add-home.component";
+import { EditHomeComponent } from "./edit-home/edit-home.component";
+import { AddTravelComponent } from "./add-travel/add-travel.component";
+import { EditTravelComponent } from "./edit-travel/edit-travel.component";
+import { ResultsComponent } from "./results/results.component";
+import { MatchesComponent } from "./matches/matches.component";
+import { SignupComponent } from "./auth/signup/signup.component";
+import { LoginComponent } from "./auth/login/login.component";
+import { LandingPageComponent } from "./landing-page/landing-page.component";
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     EditTravelComponent,
     ResultsComponent,
     MatchesComponent,
-    LandingPageComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
@@ -44,9 +45,10 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     AppRoutingModule,
     FormsModule,
     FileUploadModule,
-    NgxPageScrollModule
+    NgxPageScrollModule,
+    NgbModule
   ],
   providers: [AuthRoutesService, HomeRoutesService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

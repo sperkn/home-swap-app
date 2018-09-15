@@ -1,18 +1,49 @@
 <h3>My Results</h3>
 <div class="results-container">
-<div class="results-card" *ngFor="let result of results">
+  <div *ngFor="let result of results" class="results-card">
+
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+        <li data-target="#demo" data-slide-to="3"></li>
+        <li data-target="#demo" data-slide-to="4"></li>
+      </ul>
+
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{{result.userHome.image[0].url}}">
+        </div>
+        <div class="carousel-item">
+          <img src="{{result.userHome.image[1].url}}">
+        </div>
+        <div class="carousel-item">
+          <img src="{{result.userHome.image[2].url}}">
+        </div>
+        <div class="carousel-item">
+          <img src="{{result.userHome.image[3].url}}">
+        </div>
+        <div class="carousel-item">
+          <img src="{{result.userHome.image[4].url}}">
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+
+    </div>
+
     <p>Travel ID: {{result._id}}</p>
     <button (click)="like(result._id)"> Like </button>
     <button (click)="dislike(result._id)"> Dislike </button>
   </div>
-
 </div>
-
-
-
-
-
-
-
-
-
