@@ -21,7 +21,8 @@ export class ResultsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private travel: TravelRoutesService,
-    private connection: ConnectionRoutesService
+    private connection: ConnectionRoutesService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -75,4 +76,5 @@ export class ResultsComponent implements OnInit {
     this.connection.addConnection(userRequest, otherUserRequest, this.dummyData).subscribe();
     console.log("connect run");
   }
+
 }

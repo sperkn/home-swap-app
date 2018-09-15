@@ -21,7 +21,7 @@
 <h3>My Travels</h3>
 <div class="travel-container">
   <div *ngFor="let travel of travels">
-    <p>Start Date: {{ travel.beginDate | date }} End Date: {{ travel.beginDate | date }}
+    <p>Start Date: {{ travel.beginDate | date }} End Date: {{ travel.endDate | date }}
       <a [routerLink]="['../edit-travel', travel._id]">Edit</a>
       <a [routerLink]="['../results', travel._id]">Results</a>
       <button (click)="deleteTravel(travel._id)">Delete</button>

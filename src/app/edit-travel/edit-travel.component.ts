@@ -20,7 +20,9 @@ export class EditTravelComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private travel: TravelRoutesService
+    private travel: TravelRoutesService,
+    private router: Router
+
   ) {}
 
   ngOnInit() {
@@ -44,6 +46,8 @@ export class EditTravelComponent implements OnInit {
     this.formInfo.beginDate += 'T00:00:00';
     this.formInfo.endDate += 'T00:00:00';
     this.travel.editTravel(this.formInfo, this.travelId).subscribe();
+    this.router.navigate(["/dashboard"]);
+
   }
 
 

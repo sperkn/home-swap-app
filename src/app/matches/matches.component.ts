@@ -34,7 +34,7 @@ export class MatchesComponent implements OnInit {
     this.travel.travelDetail(this.otherTravelId).subscribe(travelDetail => {
       this.travelReq = travelDetail;
       this.travelHome = travelDetail.userHome;
-      // this.privateInfo(this.travelReq.user); **************
+      this.privateInfo(this.travelReq.user);
       // console.log(this.travelHome);
       // console.log(this.travelReq);
     });
@@ -63,6 +63,7 @@ export class MatchesComponent implements OnInit {
       if (this.connectionLength == 11) {
         this.privateInfo(this.travelReq.user);
       }
+      this.router.navigate(["/dashboard"]);
     });
   }
 
@@ -73,8 +74,8 @@ export class MatchesComponent implements OnInit {
 
   privateInfo(userId) {
     this.connection.privateInfo(userId).subscribe(userInfo => {
-      // this.contactInfo = userInfo[0];
-      console.log(this.contactInfo);
+      this.contactInfo = userInfo[0];
+      // console.log(this.contactInfo);
     });
   }
 }
