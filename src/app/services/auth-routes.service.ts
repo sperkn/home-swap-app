@@ -2,19 +2,21 @@ import { Injectable } from "@angular/core";
 import { Http, Response } from "@angular/http";
 import { map, catchError } from "rxjs/operators";
 import { Observable, throwError } from "rxjs";
+import { environment } from '../../environments/environment'
+
 
 @Injectable({
   providedIn: "root"
 })
 export class AuthRoutesService {
-  mainURL: string = "http://localhost:3000/api";
+  // mainURL: string = "http://localhost:3000/api";
   constructor(private http: Http) {}
   handleError(e) {
     return throwError(e.json().message);
   }
 
   signup(user) {
-    return this.http.post(`${this.mainURL}/signup`, user).pipe(
+    return this.http.post(`${environment.BASE_URL}/api/signup`, user).pipe(
       map(res => res.json()),
       catchError(this.handleError)
     );
@@ -22,7 +24,7 @@ export class AuthRoutesService {
 
   login(user) {
     return this.http
-      .post(`${this.mainURL}/login`, user, { withCredentials: true })
+      .post(`${environment.BASE_URL}/api/login`, user, { withCredentials: true })
       .pipe(
         map(res => res.json()),
         catchError(this.handleError)
@@ -31,7 +33,7 @@ export class AuthRoutesService {
 
   isLoggedIn() {
     return this.http
-      .get(`${this.mainURL}/loggedin`, { withCredentials: true })
+      .get(`${environment.BASE_URL}/api/loggedin`, { withCredentials: true })
       .pipe(
         map(res => res.json()),
         catchError(this.handleError)
@@ -39,6 +41,6 @@ export class AuthRoutesService {
   }
 
   logout() {
-    return this.http.post(`${this.mainURL}/logout`, {}, {withCredentials: true}).pipe(map(res => res.json()), catchError(this.handleError));
+    return this.http.post(`${environment.BASE_URL}/api/logout`, {}, {withCredentials: true}).pipe(map(res => res.json()), catchError(this.handleError));
   }
 }

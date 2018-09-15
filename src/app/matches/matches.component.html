@@ -10,9 +10,10 @@
   </p>
 </div>
 
+<div *ngIf="contactInfo">
 <button type="button" (click)="acceptConnection()"> Accept </button>
 <button type="button" (click)="declineConnection()"> Decline </button>
-
+</div>
 
 <div>
   <div *ngIf="connectionLength == 11">
