@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FileUploader } from 'ng2-file-upload';
+import { Router } from "@angular/router";
+import { AuthRoutesService } from "../services/auth-routes.service";
+import { environment } from '../../environments/environment'
 
-const URL = 'http://localhost:3000/api/myhome';
+const URL = `${environment.BASE_URL}/api/myhome`;
 
 @Component({
   selector: 'app-add-home',
@@ -32,7 +35,9 @@ export class AddHomeComponent implements OnInit {
   };
 
   feedback: string;
-  
+  // user: any = false;
+  // error: string;
+
   constructor() { }
 
   ngOnInit() {
@@ -59,6 +64,18 @@ export class AddHomeComponent implements OnInit {
     };
 
     this.uploader.uploadAll();
+    // .subscribe(user => this.successCb(user), err => this.errorCb(err));
   }
+  
+  // errorCb(err) {
+  //   this.error = err;
+  //   this.user = null;
+  // }
+
+  // successCb(user) {
+  //   this.user = user;
+  //   this.router.navigate(["/dashboard"]);
+  //   this.error = null;
+  // }
 
 }

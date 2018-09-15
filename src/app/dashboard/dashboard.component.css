@@ -33,3 +33,29 @@ border-radius: 10px;
   font-size: 85%;
   border-radius: .25em;
 }
+
+#demo {
+  width: 500px;
+}
+
+img {
+  height: 8em;
+  width: 8em;
+}
+
+/* *****REQUESTS STYLING***** */
+
+#my_request_section {
+  height: 40vh;
+}
+
+#my_request_header {
+  background-color: #d9d9d9;
+  padding: .5em 0;
+  align-items: center;
+  /* border-radius: 1em 1em 0 0; */
+}
+
+.inline_flex {
+  display: inline-flex;
+}
