@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <h3>Match Info</h3>
 
 <div *ngIf="travelHome">
@@ -9,13 +10,13 @@
   </p>
 </div>
 
-<div *ngIf="contactInfo">
+<!-- <div *ngIf="contactInfo">
 <button type="button" (click)="acceptConnection()"> Accept </button>
 <button type="button" (click)="declineConnection()"> Decline </button>
-</div>
+</div> -->
 
 <div>
-  <div *ngIf="connectionLength == 11">
+  <!-- <div *ngIf="connectionLength == 11"> -->
     <h3>Match Contact</h3>
     <div *ngIf="contactInfo">
       {{contactInfo.firstName}}
@@ -27,5 +28,5 @@
       {{travelHome.address.state}}
       {{travelHome.address.country}}
     </div>
-  </div>
+  <!-- </div> -->
 </div>

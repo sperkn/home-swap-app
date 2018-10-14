@@ -1,0 +1,96 @@
+/* .navbar-box {
+  height: 83px;
+  width: 100vw;
+  padding: 0 110px;
+  opacity: 0.9;
+  background: linear-gradient(46.01deg, #02ABC3 0%, #DFE553 100%);
+}
+
+.img-box {
+  display: inline-block;
+  padding-top: 15.5px;
+}
+
+.nav-logo {
+  height: 50px;
+  width: 149px;
+}
+
+.nav-link {
+  padding-top: 32.5px;
+}
+
+.icon-user {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin-right: 6px;
+}
+
+.icon-arrow {
+  display: inline-block;
+  height: 8px;
+  margin-left: 6px;
+}
+
+.drop-down-menu {
+  font-size: 14px;
+  display: inline-block;
+}
+
+.drop-down-text {
+  display: inline-block;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.btn {
+  display: inline-block;
+  background-color: transparent;
+}
+
+.btn:focus {
+  box-shadow: none;
+}
+
+.dropdown-item {
+  color: #999999;
+}
+
+.dropdown-menu {
+  height: 100px;
+  width: 50px;
+}
+
+.logout-btn{
+  
+} */
+
+.nav-logo{
+  height: 50px;
+}
+
+.navbar{
+    padding: 0 110px;
+    height: 83px;
+    opacity: 0.9;
+    background: linear-gradient(46.01deg, #02ABC3 0%, #DFE553 100%);
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-spacing{
+  padding: 0 3px;
+}
+
+.nav-link{
+  color: #ffffff;
+}
+
+.nav-dashboard{
+  margin-right: 63px;
+}

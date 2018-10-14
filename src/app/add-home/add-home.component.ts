@@ -1,8 +1,10 @@
-import { Component, OnInit } from "@angular/core";
-import { FileUploader } from "ng2-file-upload";
-import { ActivatedRoute, Router } from "@angular/router";
+import { Component, OnInit } from '@angular/core';
+import { FileUploader } from 'ng2-file-upload';
+import { Router } from "@angular/router";
+import { AuthRoutesService } from "../services/auth-routes.service";
+import { environment } from '../../environments/environment'
 
-const URL = "http://localhost:3000/api/myhome";
+const URL = `${environment.BASE_URL}/api/myhome`;
 
 @Component({
   selector: "app-add-home",

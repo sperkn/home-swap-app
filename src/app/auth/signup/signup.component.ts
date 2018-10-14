@@ -44,6 +44,7 @@ export class SignupComponent implements OnInit {
   
   successCb(user) {
     this.user = user;
+    this.router.navigate(["/login"]);
     this.error = null;
   }
 }

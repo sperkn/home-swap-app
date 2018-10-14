@@ -15,7 +15,8 @@
 #login_page_background {
   height: 100vh;
   /* background-color: #dfcfbf; */
-  background-color: HSL(200, 55%, 97%);
+  background-color: #f3f9fc;
+  /* background-color: HSL(200, 55%, 97%); */
 }
 
 #login_form {
@@ -46,7 +47,8 @@ button {
 } */
 
 #sign_up_message{
-  background-color: HSL(0, 0%, 85%);
+  background-color: #d9d9d9;
+  /* background-color: HSL(0, 0%, 85%); */
   color: #fff;
   padding-top: 0.5em;
   padding-bottom: 0.5em;

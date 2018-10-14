@@ -13,17 +13,18 @@ import { NgxPageScrollModule } from "ngx-page-scroll";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 //Components Imports
-import { AppComponent } from "./app.component";
-import { DashboardComponent } from "./dashboard/dashboard.component";
-import { AddHomeComponent } from "./add-home/add-home.component";
-import { EditHomeComponent } from "./edit-home/edit-home.component";
-import { AddTravelComponent } from "./add-travel/add-travel.component";
-import { EditTravelComponent } from "./edit-travel/edit-travel.component";
-import { ResultsComponent } from "./results/results.component";
-import { MatchesComponent } from "./matches/matches.component";
-import { SignupComponent } from "./auth/signup/signup.component";
-import { LoginComponent } from "./auth/login/login.component";
-import { LandingPageComponent } from "./landing-page/landing-page.component";
+import { AppComponent } from './app.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AddHomeComponent } from './add-home/add-home.component';
+import { EditHomeComponent } from './edit-home/edit-home.component';
+import { AddTravelComponent } from './add-travel/add-travel.component';
+import { EditTravelComponent } from './edit-travel/edit-travel.component';
+import { ResultsComponent } from './results/results.component';
+import { MatchesComponent } from './matches/matches.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { LoginComponent } from './auth/login/login.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { LandingPageComponent } from "./landing-page/landing-page.component";
     EditTravelComponent,
     ResultsComponent,
     MatchesComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

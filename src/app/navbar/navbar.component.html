@@ -1,0 +1,58 @@
+<!-- <header class="container">
+  <div class="navbar-box row">
+    <div class="img-box col-8">
+      <img class="nav-logo" src="../../assets/images/logo.png" alt="Logo">
+    </div>
+    <div class="col-2 nav-link text-center">
+      <a href="#">Dashboard</a>
+    </div>
+    <div class="col-2 nav-link">
+      <div class="drop-down-menu ">
+        <div class="dropdown">
+          <button class="btn dropdown-toggle d-flex justify-content-center" type="button" id="dropdownMenuButton"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img class="icon-user align-self-center" src="../../assets/images/icon-user.png">
+            <span class="drop-down-text align-self-center">{{user.firstName}} {{user.lastName}}</span>
+            <img class="icon-arrow align-self-center" src="../../assets/images/icon-arrow-down.png">
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item logout-btn" href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header> -->
+
+<header>
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#">
+      <img src="../../assets/images/logo.png" class="nav-logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item">
+          <a class="nav-link nav-dashboard" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <img class="icon-user align-self-center dropdown-spacing" src="../../assets/images/icon-user.png">
+            <span class="drop-down-text align-self-center dropdown-spacing">{{user.firstName}} {{user.lastName}}</span>
+            <img class="icon-arrow align-self-center dropdown-spacing" src="../../assets/images/icon-arrow-down.png">
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <button class="dropdown-item" (click)="logout()">Logout</button>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+</header>
