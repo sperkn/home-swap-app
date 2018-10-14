@@ -63,6 +63,7 @@ export class MatchesComponent implements OnInit {
       if (this.connectionLength == 11) {
         this.privateInfo(this.travelReq.user);
       }
+      this.router.navigate(["/dashboard"]);
     });
   }
 
@@ -74,7 +75,7 @@ export class MatchesComponent implements OnInit {
   privateInfo(userId) {
     this.connection.privateInfo(userId).subscribe(userInfo => {
       this.contactInfo = userInfo[0];
-      console.log(this.contactInfo);
+      // console.log(this.contactInfo);
     });
   }
 }

@@ -19,7 +19,7 @@ export class DashboardComponent implements OnInit {
   constructor(
     private travel: TravelRoutesService,
     private home: HomeRoutesService,
-    private connection: ConnectionRoutesService
+    private connection: ConnectionRoutesService,
   ) {}
 
   ngOnInit() {

@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { AuthRoutesService } from "../../services/auth-routes.service";
-import { Router } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
+
 
 @Component({
   selector: "app-signup",
@@ -20,7 +21,9 @@ export class SignupComponent implements OnInit {
   error: string;
   privateData: any = '';
 
-  constructor(private auth: AuthRoutesService, private router: Router) {}
+  constructor(private auth: AuthRoutesService,
+    private router: Router
+    ) {}
 
   ngOnInit() {}
 
@@ -30,6 +33,8 @@ export class SignupComponent implements OnInit {
         (user) => this.successCb(user),
         (err) => this.errorCb(err)
       );
+      this.router.navigate(["/dashboard"]);
+
   }
 
   errorCb(err) {
