@@ -1,0 +1,29 @@
+@import '../../sass/_variables.scss';
+
+.nav-logo{
+  height: 50px;
+}
+
+.navbar{
+    padding: 0 11rem;
+    height: 8.3rem;
+    opacity: 0.9;
+    background: linear-gradient(46.01deg, $color-secondary 0%, $color-tertiary 100%);
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-spacing{
+  padding: 0 3px;
+}
+
+.nav-link{
+  color: $color-white;
+  font-size: $default-font-size;
+}
+
+.nav-dashboard{
+  margin-right: 6.3rem;
+}

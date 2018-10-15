@@ -1,0 +1,91 @@
+@import "../../sass/variables"; 
+
+.dashboard {
+ background-color: $color-background;
+ font-size: $default-font-size;
+
+  &__container {
+    margin: 6rem;
+
+    display: grid;
+    grid-template-rows: 10rem repeat(3, 15rem);
+    grid-template-columns: 30rem repeat(4, 1fr);
+    grid-gap: 2rem 4rem;
+  }
+
+  &__item {
+    // ***just for testing purposes***
+    background-color: orange;
+    
+  }
+
+  &__sidebar {
+    grid-row: 1 / -1;
+    grid-column: 1 / 2;
+  }
+
+  &__sidebar-heading {
+    // height: 29px;	
+    // width: 189px;	
+    color: $color-primary;	
+    font-family: $default-font-family;	
+    font-size: 2.4rem;
+    font-weight: bold;	
+    letter-spacing: -0.8px;	
+    // line-height: 29px;	
+    text-shadow: 0 0 4px 0 rgba(0,0,0,0.2);
+  }
+
+  &__heading {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+  }
+
+  &__heading-text {
+    color: $color-grey;
+    font-family: $default-font-family;
+    font-size: 5rem;
+    font-weight: bold;
+    width: 23rem;
+    letter-spacing: -1.67px;
+  }
+ 
+
+  &__heading-secondary {
+    grid-row: 1 / 2;
+    grid-column: 3 / 6;
+  }
+
+  &__heading-secondary-text {
+    color: $color-grey;
+    font-size: $default-font-size;
+    font-family: $default-font-family;
+    margin-top: 2rem;
+  }
+
+  &__item--4 {
+    grid-row: 2 / 3;
+    grid-column: 2 / 6; 
+    background-color: $color-white;
+    border: 2px solid $color-primary; 
+  }
+
+  &__results-header {
+    grid-row: 3 / 4;
+    grid-column: 2 / 5;
+  }
+
+  &__results-header-text {
+  
+      // height: 30px;
+      // width: 219px;
+      color: $color-grey;
+      font-family: 'Lato';
+      font-size: 2.5rem;
+      font-style: italic;
+      letter-spacing: -0.83px;
+      // line-height: 30px;
+      text-shadow: 0 0 4px 0 rgba(0,0,0,0.2);
+ 
+  }
+}

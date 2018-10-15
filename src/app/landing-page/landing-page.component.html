@@ -5,7 +5,13 @@
   </div>
 
   <div class="header__login-box">
-    <a href="#" class="header__login-link">Login</a>
+    <div class="dropdown">
+      <button class="dropdown-toggle header__login-link" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Login
+      </button>
+      <app-login></app-login>
+    </div>
   </div>
 
 
@@ -16,9 +22,9 @@
   </div>
 
   <div class="header__form-box">
-    <!-- <div class="header__form"> -->
+
     <app-signup></app-signup>
-    <!-- </div> -->
+
   </div>
 
 </header>
@@ -28,34 +34,39 @@
       <img src="/src/assets/images/home.png" alt="home icon" class="feature-box__icon">
       <h3 class="feature-box__heading">Add your Home</h3>
       <p class="feature-box__text">
-          Add your home to your account in order to create a TRAVel Request.
+        Add your home to your account in order to create a TRAVel Request.
       </p>
     </div>
     <div class="feature-box">
-      <img src="/src/assets/images/travel-request.png" alt="travel request icon"  class="feature-box__icon">
+      <img src="/src/assets/images/travel-request.png" alt="travel request icon" class="feature-box__icon">
       <h3 class="feature-box__heading">Set Travel Dates</h3>
       <p class="feature-box__text">
-          Create a Request with your preferred criteria.
+        Create a Request with your preferred criteria.
       </p>
     </div>
     <div class="feature-box">
       <img src="/src/assets/images/matches.png" alt="travel request icon" class="feature-box__icon">
       <h3 class="feature-box__heading">Review Matches</h3>
       <p class="feature-box__text">
-          Review your matches and like the homes you want to swap with.
+        Review your matches and like the homes you want to swap with.
       </p>
     </div>
     <div class="feature-box">
       <img src="/src/assets/images/connections.png" alt="travel request icon" class="feature-box__icon">
       <h3 class="feature-box__heading">Connections</h3>
       <p class="feature-box__text">
-          Accept your connections and get prepared to travel!
+        Accept your connections and get prepared to travel!
       </p>
     </div>
   </section>
 </main>
 
 <footer class="footer">
+<div class="footer__copyright">
+  <p class="footer__copyright-text">&copy; 2018 TravApp LLC All Right Reserved</p>
+</div>
 
-
+<div class="footer__terms">
+  <p class="footer__terms-text">Terms & Conditions <span class="footer__terms-bracket">|</span> Privacy Policy</p>
+</div>
 </footer>

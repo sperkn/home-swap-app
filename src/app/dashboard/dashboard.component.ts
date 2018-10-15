@@ -7,7 +7,7 @@ import { ConnectionRoutesService } from "../services/connection-routes.service";
 @Component({
   selector: "app-dashboard",
   templateUrl: "./dashboard.component.html",
-  styleUrls: ["./dashboard.component.css"],
+  styleUrls: ["./dashboard.component.scss"],
   providers: [HomeRoutesService]
 })
 export class DashboardComponent implements OnInit {
