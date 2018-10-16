@@ -140,15 +140,14 @@ travel requests info
 </div> -->
 
 
-<main class="dashboard">
+<!-- <main class="dashboard">
   <div class="dashboard__container">
     <div class="dashboard__item dashboard__sidebar">
       <h3 class="dashboard__sidebar-heading">Select Travel Dates</h3>
     </div>
-    <div class="dashboard__item dashboard__heading">
-      <!-- Dashboard -->
+    <header class="dashboard__item dashboard__heading">
       <h1 class="dashboard__heading-text">Dashboard</h1>
-    </div>
+    </header>
     <div class="dashboard__item dashboard__heading-secondary">
       <h4 class="dashboard__heading-secondary-text">Manage your matches, connections and travel dates.</h4>
     </div>
@@ -156,6 +155,44 @@ travel requests info
     <div class="dashboard__item dashboard__results-header">
       <h3 class="dashboard__results-header-text">Results for Travel Dates</h3>
     </div>
+
+  </div>
+</main> -->
+
+<main class="dashboard">
+  <div class="dashboard__container">
+    <div class="sidebar">
+      <h3 class="sidebar__header">Create Travel Request</h3>
+      <p class="sidebar__text">Pick what works best for you and let TRAV doing the searching.</p>
+      <app-add-travel></app-add-travel>
+    </div>
+
+    <header class="header">
+      <h1 class="header__main">Dashboard</h1>
+      <p class="header__text">Manage your travel requests, matches and connections.</p>
+    </header>
+
+    <section class="data">
+      Data
+    </section>
+
+    <header class="travel-header">
+      <h2 class="travel-header__main">Travel Requests</h2>
+    </header>
+
+    <section class="travel-results">
+      Travel Results
+
+      <!-- <app-results></app-results> -->
+    </section>
+
+    <header class="connections-header">
+        <h2 class="connections-header__main">Connections</h2>
+    </header>
+
+    <section class="connections__results">
+      Connection Results
+    </section>
 
   </div>
 </main>

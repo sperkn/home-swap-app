@@ -1,0 +1,14 @@
+@import "../../sass/variables";
+
+.results {
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-rows: 50rem;
+    grid-column-gap: 4.5rem;
+    grid-row-gap: 6rem;
+    // grid-template-rows: 
+    justify-items: center;
+  }
+}
