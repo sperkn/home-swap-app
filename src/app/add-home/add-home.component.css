@@ -63,4 +63,6 @@ flex-wrap: wrap;
 }
  */
 
-
+.form-box{
+  max-width: 960px;
+}

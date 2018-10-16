@@ -208,50 +208,101 @@
 </div> -->
 
 <div class="background">
-    <div>
-      <h3 class="heading">Enter your travel information below and pack your bags!</h3>
-    </div>
-    <form class="form-box">
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label>Start Date:</label>
-          <input type="date" [(ngModel)]="formInfo.beginDate" name="beginDate" class="form-control">
-        </div>
-        <div class="form-group col-md-6">
-          <label>End Date:</label>
-          <input type="date" [(ngModel)]="formInfo.endDate" name="endDate" class="form-control">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-12">
-          <label>Home Type:</label>
-          <select class="form-control" [(ngModel)]="formInfo.home" name="home">
-            <option>House</option>
-            <option>Apt</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-12">
-          <label>Setting:</label>
-          <select class="form-control" [(ngModel)]="formInfo.setting" name="setting">
-            <option>Urban</option>
-            <option>Suburban</option>
-            <option>Rural</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-12">
-          <label>Landscape:</label>
-          <select class="form-control" [(ngModel)]="formInfo.landscape" name="landscape">
-            <option>Tropical</option>
-            <option>Mountainous</option>
-            <option>City</option>
-            <option>Coastal</option>
-          </select>
-        </div>
-      </div>
-      <button type="button" class="btn btn-primary" (click)="addTravel()"> Add Request </button>
-    </form>
+  <div>
+    <h3 class="heading">My Homes</h3>
   </div>
+  <form class="form-box">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label>Country</label>
+        <select class="form-control" name="country" [(ngModel)]="address.country" required>
+          <option>United States</option>
+        </select>
+      </div>
+      <div class="form-group col-md-6">
+        <label>Property Type:</label>
+        <select class="form-control" [(ngModel)]="formInfo.home" name="home" required>
+          <option>House</option>
+          <option>Apt</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label>Address</label>
+        <input class="form-control" type="text" name="street" [(ngModel)]="address.street" required />
+      </div>
+      <div class="form-group col-md-2">
+        <label>Bedrooms</label>
+        <select class="form-control" name="bedrooms" [(ngModel)]="newHome.bedrooms" required>
+          <option>01</option>
+          <option>02</option>
+          <option>03</option>
+          <option>04</option>
+        </select>
+      </div>
+      <div class="form-group col-md-2">
+        <label>Beds</label>
+        <select class="form-control" name="beds" [(ngModel)]="newHome.beds" required>
+          <option>01</option>
+          <option>02</option>
+          <option>03</option>
+          <option>04</option>
+        </select>
+      </div>
+      <div class="form-group col-md-2">
+        <label>Baths</label>
+        <select class="form-control" name="baths" [(ngModel)]="newHome.baths" required>>
+          <option>01</option>
+          <option>02</option>
+          <option>03</option>
+          <option>04</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label>City</label>
+        <select class="form-control" name="city" [(ngModel)]="address.city" required>
+          <option>Miami</option>
+        </select>
+      </div>
+      <div class="form-group col-6">
+        <label>Setting:</label>
+        <select class="form-control" [(ngModel)]="formInfo.setting" name="setting" required>
+          <option>Urban</option>
+          <option>Suburban</option>
+          <option>Rural</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-4">
+        <label>State</label>
+        <select class="form-control" name="state" [(ngModel)]="address.state" required>
+          <option>Florida</option>
+        </select>
+      </div>
+      <div class="form-group col-md-2">
+        <label>Zip Code</label>
+        <input class="form-control" type="text" name="zipCode" [(ngModel)]="address.zipCode" required />
+      </div>
+      <div class="form-group col-6">
+        <label>Landscape:</label>
+        <select class="form-control" [(ngModel)]="formInfo.landscape" name="landscape">
+          <option>Tropical</option>
+          <option>Mountainous</option>
+          <option>City</option>
+          <option>Coastal</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-12">
+        <label>Description</label>
+        <input class="form-control" type="text" name="description" [(ngModel)]="newHome.description" required />
+      </div>
+    </div>
+    <button type="button" class="btn btn-primary" (click)="submit()">Save</button>
+  </form>
+</div>

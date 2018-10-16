@@ -1,169 +1,60 @@
 <app-navbar></app-navbar>
 
-<div id="results_main">
+<div class="results__container" *ngFor="let result of results">
+  <h4 class="results__date">DATE HERE</h4>
+  <div class="results__card">
 
-  <div id="my_results_section">
-    <div *ngFor="let result of results" class="results-card">
-      <div class="pure-g">
+    <!-- ***BEGIN BOOSTRAP CODE FOR CAROUSEL IMAGES W/ ANGULAR DATA HANDLING OF IMAGES FOR EACH RESULTS*** -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
-        <div class="pure-u-3-24 pure-u-lg-3-24 pure-u-xl-3-24 home_container_spacing">
-          <!-- EMPTY ON PURPOSE -->
+      <ol class="carousel-indicators">
+        <div *ngFor="let image of result.userHome.images; let i=index">
+          <li data-target="#carouselExampleIndicators" data-slide-to="${i}" class="active"></li>
         </div>
+      </ol>
 
-        <div class="pure-u-18-24 pure-u-lg-18-24 pure-u-xl-18-24 home_container_spacing">
-          <!-- BEGIN header row/1st row in main container for user home cards  -->
-          <div id="my_results_header" class="pure-g">
-            <div class="pure-u-2-24 pure-u-lg-2-24 pure-u-xl-2-24">
-              <!-- EMPTY ON PURPOSE -->
-            </div>
-            <div class="pure-u-13-24 pure-u-lg-13-24 pure-u-xl-13-24">
-              <h3>Match</h3>
-            </div>
-            <div class="pure-u-4-24 pure-u-lg-4-24 pure-u-xl-4-24">
-              <button class="button-success button-small pure-button" (click)="like(result._id)">
+      <div class="carousel-inner">
+        <div *ngFor="let image of result.userHome.images">
+          <div class="carousel-item active">
+            <img class="d-block w-100" [src]="image.url" alt="Home Image">
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <!-- ***END BOOTSTRAP CODE FOR CAROUSEL IMAGES W/ ANGULAR DATA HANDLING OF IMAGES FOR EACH RESULTS*** -->
+    <p> {{ result.user.name}} </p>
+
+    <p> {{ result.userHome.address.city}}, {{ result.userHome.address.state}} </p>
+
+    <p>{{ result.home}} </p>
+
+    <p> {{ result.setting}} </p>
+
+    <p> {{ result.landscape}} </p>
+
+  </div>
+</div>
+
+
+
+<!-- <div *ngFor="let result of results" class="results-card"> -->
+<!-- <button class="" (click)="like(result._id)">
                 <i class="far fa-heart"></i>
                 Like
-              </button>
-            </div>
-            <div class="pure-u-4-24 pure-u-lg-4-24 pure-u-xl-4-24">
-              <button class="button-dislike button-small pure-button" (click)="like(result._id)">
+              </button> -->
+
+
+<!-- <button class="" (click)="dislike(result._id)">
                 <i class="far fa-thumbs-down"></i>
                 Dislike
-              </button>
-            </div>
-            <div class="pure-u-1-24 pure-u-lg-1-24 pure-u-xl-1-24">
-              <!-- EMPTY ON PURPOSE -->
-            </div>
-          </div>
-          <!-- END header row/1st row in main container for user home cards  -->
-
-          <!-- Begin SECOND ROW for PICTURE CAROUSEL & HOME DATA Each -->
-          <div id="my_result_data" class="pure-g">
-            <!-- <div *ngFor="let home of homes"> -->
-              <div class="pure-u-3-4 pure-u-lg-3-4 pure-u-xl-3-4">
-                <div class="pure-g">
-                <div *ngFor="let image of result.userHome.images" class="inline_flex">
-                  <!-- <div class="pure-u-1-2"> -->
-                  <!-- <div class="pure-u-1"> -->
-                  <img [src]="image.url" />
-                  <!-- </div> -->
-                  <!-- </div> -->
-                </div>
-                </div>
-              </div>
-
-              <div class="pure-u-1-4 pure-u-lg-1-4 pure-u-xl-1-4">
-                <div class="pure-g">
-                  <div class="pure-u-1">
-                    <!-- <h4></h4> -->
-                    <p> {{ result.user.name}} </p>
-                  </div>
-                </div>
-                <div class="pure-g">
-                  <div class="pure-u-1">
-                    <p> {{ result.userHome.address.city}}, {{ result.userHome.address.state}}   </p>
-                  </div>
-                </div>
-                <div class="pure-g">
-                  <div class="pure-u-1">
-                    <p>{{ result.home}} </p>
-                  </div>
-                </div>
-                <div class="pure-g">
-                  <div class="pure-u-1">
-                    <p> {{ result.setting}} </p>
-                  </div>
-                </div>
-                <div class="pure-g">
-                  <div class="pure-u-1">
-                    <p> {{ result.landscape}} </p>
-                  </div>
-                </div>
-              <!-- </div> -->
-            </div>
-          </div>
-          <!-- END SECOND ROW FOR PIC & DATA -->
-
-
-
-
-        </div>
-
-        <div class="pure-u-3-24 pure-u-lg-3-24 pure-u-xl-3-24 home_container_spacing">
-          <!-- EMPTY ON PURPOSE -->
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-  <h3>My Results</h3>
-  <div class="results-container">
-    <div *ngFor="let result of results" class="results-card">
-
-
-
-      <p>Travel ID: {{result._id}}</p>
-      <button (click)="like(result._id)"> Like </button>
-      <button class="button-success pure-button">
-        <i class="fa fa-cog"></i>
-        Settings
-      </button>
-      <i class="fas fa-check-square"></i>
-      <button (click)="dislike(result._id)"> Dislike </button>
-    </div>
-  </div> -->
-
-
-
-  <!-- <div id="demo" class="carousel slide" data-ride="carousel">
-
-      Indicators
-      <ul class="carousel-indicators">
-        <li data-target="#demo" data-slide-to="0" class="active"></li>
-        <li data-target="#demo" data-slide-to="1"></li>
-        <li data-target="#demo" data-slide-to="2"></li>
-        <li data-target="#demo" data-slide-to="3"></li>
-        <li data-target="#demo" data-slide-to="4"></li>
-      </ul>
-
-      The slideshow
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="{{result.userHome.image[0].url}}">
-        </div>
-        <div class="carousel-item">
-          <img src="{{result.userHome.image[1].url}}">
-        </div>
-        <div class="carousel-item">
-          <img src="{{result.userHome.image[2].url}}">
-        </div>
-        <div class="carousel-item">
-          <img src="{{result.userHome.image[3].url}}">
-        </div>
-        <div class="carousel-item">
-          <img src="{{result.userHome.image[4].url}}">
-        </div>
-      </div>
-
-      Left and right controls
-      <a class="carousel-control-prev" href="#demo" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </a>
-      <a class="carousel-control-next" href="#demo" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </a>
-
-    </div> -->
+              </button> -->
+            <!-- </div> -->

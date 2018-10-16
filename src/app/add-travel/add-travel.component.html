@@ -1,5 +1,7 @@
-<app-navbar></app-navbar>
-<!-- <form>
+<!-- <app-navbar></app-navbar> -->
+
+<!-- <h2> Add Travel </h2>
+<form>
   <h2> Add Travel </h2>
   <label> Start Date </label>
   <input type="date" [(ngModel)]="formInfo.beginDate" name="beginDate" />
@@ -18,23 +20,23 @@
   <br>
   <button type="button" (click)="addTravel()"> Add Request </button>
 </form> -->
-<div class="background">
-  <div>
-    <h3 class="heading">Enter your travel information below and pack your bags!</h3>
-  </div>
+
+
   <form class="form-box">
     <div class="form-row">
-      <div class="form-group col-md-6">
+      <div class="form-group col-12">
         <label>Start Date:</label>
         <input type="date" [(ngModel)]="formInfo.beginDate" name="beginDate" class="form-control">
       </div>
-      <div class="form-group col-md-6">
+    </div>
+    <div class="form-row">
+      <div class="form-group col-12">
         <label>End Date:</label>
         <input type="date" [(ngModel)]="formInfo.endDate" name="endDate" class="form-control">
       </div>
     </div>
     <div class="form-row">
-      <div class="form-group col-md-12">
+      <div class="form-group col-12">
         <label>Home Type:</label>
         <select class="form-control" [(ngModel)]="formInfo.home" name="home">
           <option>House</option>
@@ -43,7 +45,7 @@
       </div>
     </div>
     <div class="form-row">
-      <div class="form-group col-md-12">
+      <div class="form-group col-12">
         <label>Setting:</label>
         <select class="form-control" [(ngModel)]="formInfo.setting" name="setting">
           <option>Urban</option>
@@ -53,7 +55,7 @@
       </div>
     </div>
     <div class="form-row">
-      <div class="form-group col-md-12">
+      <div class="form-group col-12">
         <label>Landscape:</label>
         <select class="form-control" [(ngModel)]="formInfo.landscape" name="landscape">
           <option>Tropical</option>
@@ -63,6 +65,5 @@
         </select>
       </div>
     </div>
-    <button type="button" class="btn btn-primary" (click)="addTravel()"> Add Request </button>
+    <button type="button" class="btn btn-primary col-12" (click)="addTravel()"> Request Dates </button>
   </form>
-</div>
