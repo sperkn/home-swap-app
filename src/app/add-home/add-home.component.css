@@ -1,4 +1,4 @@
-#add_home_background {
+/* #add_home_background {
   background-color: #f3f9fc;
   height: 100vh;
 }
@@ -16,12 +16,7 @@
   justify-content: center;
   align-content: center;
   text-align: center;
-  /* margin-top: 1em; */
 }
-
-/* #container_main {
-  
-} */
 
 #new_home_header {
   background-color: #d9d9d9;
@@ -43,17 +38,11 @@ form input {
 
 .button-success {
   background: #006392;
-  /* background: rgb(28, 184, 65); this is a green */
 }
 
 .button-cancel {
   background: #e12b23;
-  /* background: rgb(28, 184, 65); this is a green */
 }
-
-/* .button_radius {
-  border-radius: 50%
-} */
 
 .radio_input_spacing {
   padding-right:.5em;
@@ -72,6 +61,6 @@ flex-wrap: wrap;
   font-size: 85%;
   border-radius: .25em;
 }
-
+ */
 
 

@@ -14,8 +14,8 @@ import { MatchesComponent } from './matches/matches.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent, pathMatch: 'full' },
-  { path: 'signup', component: SignupComponent },
-  { path: 'login', component: LoginComponent },
+  // { path: 'signup', component: SignupComponent },
+  // { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'add-home', component: AddHomeComponent },
   { path: 'edit-home', component: EditHomeComponent },
