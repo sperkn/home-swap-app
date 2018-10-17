@@ -33,8 +33,7 @@ export class SignupComponent implements OnInit {
         (user) => this.successCb(user),
         (err) => this.errorCb(err)
       );
-      this.router.navigate(["/dashboard"]);
-
+      // this.router.navigate(["/dashboard"]);
   }
 
   errorCb(err) {

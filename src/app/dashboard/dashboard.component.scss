@@ -42,7 +42,7 @@
     display: grid;
     grid-template-rows: 15rem 1fr;
     // grid-template-columns: [col-start] .5fr repeat(2, 1fr) .5fr [col-end]; 
-    justify-items: center;
+    justify-content: center;
 
     &__header {
       color: $color-secondary;

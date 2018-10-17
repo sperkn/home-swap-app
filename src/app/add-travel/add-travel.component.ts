@@ -5,7 +5,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 @Component({
   selector: "app-add-travel",
   templateUrl: "./add-travel.component.html",
-  styleUrls: ["./add-travel.component.css"]
+  styleUrls: ["./add-travel.component.scss"]
 })
 export class AddTravelComponent implements OnInit {
   formInfo: any = {
