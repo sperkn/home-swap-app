@@ -5,7 +5,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 @Component({
   selector: "app-edit-travel",
   templateUrl: "./edit-travel.component.html",
-  styleUrls: ["./edit-travel.component.css"]
+  styleUrls: ["./edit-travel.component.scss"]
 })
 export class EditTravelComponent implements OnInit {
   formInfo: any = {

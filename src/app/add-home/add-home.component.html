@@ -221,7 +221,7 @@
       </div>
       <div class="form-group col-md-6">
         <label>Property Type:</label>
-        <select class="form-control" [(ngModel)]="formInfo.home" name="home" required>
+        <select class="form-control" [(ngModel)]="newHome.home" name="home" required>
           <option>House</option>
           <option>Apt</option>
         </select>
@@ -269,7 +269,7 @@
       </div>
       <div class="form-group col-6">
         <label>Setting:</label>
-        <select class="form-control" [(ngModel)]="formInfo.setting" name="setting" required>
+        <select class="form-control" [(ngModel)]="newHome.setting" name="setting" required>
           <option>Urban</option>
           <option>Suburban</option>
           <option>Rural</option>
@@ -289,7 +289,7 @@
       </div>
       <div class="form-group col-6">
         <label>Landscape:</label>
-        <select class="form-control" [(ngModel)]="formInfo.landscape" name="landscape">
+        <select class="form-control" [(ngModel)]="newHome.landscape" name="landscape">
           <option>Tropical</option>
           <option>Mountainous</option>
           <option>City</option>
