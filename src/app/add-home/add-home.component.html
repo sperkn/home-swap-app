@@ -303,6 +303,16 @@
         <input class="form-control" type="text" name="description" [(ngModel)]="newHome.description" required />
       </div>
     </div>
+    <div class="form-row">
+      <div class="col-3">
+        <input type="file" name="file" ng2FileSelect [uploader]="uploader" multiple />
+      </div>
+      <div class="col-3">
+        <p>Queue length: {{ uploader?.queue?.length }}</p>
+      </div>
+    </div>
+
+
     <button type="button" class="btn btn-primary" (click)="submit()">Save</button>
   </form>
 </div>
