@@ -9,7 +9,7 @@ const URL = `${environment.BASE_URL}/api/myhome`;
 @Component({
   selector: "app-add-home",
   templateUrl: "./add-home.component.html",
-  styleUrls: ["./add-home.component.css"]
+  styleUrls: ["./add-home.component.scss"]
 })
 export class AddHomeComponent implements OnInit {
   uploader: FileUploader = new FileUploader({

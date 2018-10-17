@@ -26,20 +26,32 @@
 
     <section class="travel-results">
       <!-- Travel Results -->
-      <div *ngIf="homes.length > 0">
-        <div *ngFor="let travel of travels">
-          <div class="travel-results__card">
-            <h4 class=travel-results__date>{{ travel.beginDate | date }} &mdash; {{ travel.endDate | date }}</h4>
-            
-            <button (click)="deleteTravel(travel._id)">Delete</button>
-            
-            <h5 class="travel-results__type">Type</h5>
-            <h5 class="travel-results__setting">Setting</h5>
-            <h5 class="travel-results__setting">Landscape</h5>
+      <div *ngFor="let travel of travels" class="travel-results__card">
 
-            <a [routerLink]="['../edit-travel', travel._id]">Edit</a>
-            <a [routerLink]="['../results', travel._id]">View Results &gt;</a>
-          </div>
+        <h4 class="travel-results__date">{{ travel.beginDate | date }} &mdash; {{ travel.endDate | date }}</h4>
+
+        <div class="travel-results__delete">
+          <button class="travel-results__delete-btn" (click)="deleteTravel(travel._id)">Delete</button>
+        </div>
+
+        <div class="travel-results__type">
+          <h5 class="type-header">Type</h5>
+          <p class="type-text">{{travel.home}}</p>
+        </div>
+
+        <div class="travel-results__type">
+          <h5 class="travel-results__setting">Setting</h5>
+          <p class="travel-results__setting-text">{{travel.setting}}</p>
+        </div>
+
+        <div class="travel-results__type">
+          <h5 class="travel-results__landscape">Landscape</h5>
+          <p class="travel-results__landscape-text">{{travel.landscape}}</p>
+        </div>
+
+        <!-- <a [routerLink]="['../edit-travel', travel._id]">Edit</a> -->
+        <div class="travel-results__review">
+          <a class="travel-results__review-link" [routerLink]="['../results', travel._id]">View Results &gt;</a>
         </div>
       </div>
     </section>
@@ -55,11 +67,6 @@
   </div>
 </main>
 
-
-
-
-
-
 <!-- 
 my home info
 <div *ngFor="let home of homes">
@@ -72,6 +79,7 @@ my home info
   <p> {{ home.address.zipCode}} </p>
   <p> {{ home.address.country}} </p>
 </div>
+
 
 
 travel requests info
