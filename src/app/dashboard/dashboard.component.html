@@ -27,11 +27,14 @@
         <h4 class="data__header">Connections</h4>
       </div>
 
-      <div *ngIf="homes.length == 0">
-        <div class="data__home">
-          <button class="date__home-btn" routerLink="/add-home">Add home</button>
-        </div>
+      <!-- <div *ngIf="homes.length == 0"> -->
+      <div class="data__home" *ngIf="homes.length == 0">
+        <button class="data__home-btn" routerLink="/add-home">Add home</button>
       </div>
+      <div class="data__home" *ngIf="homes.length > 0">
+        <button class="data__home-btn" routerLink="/edit-home">Edit home</button>
+      </div>
+      <!-- </div> -->
     </section>
 
     <header class="travel-header">
