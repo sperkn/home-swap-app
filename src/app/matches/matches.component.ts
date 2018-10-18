@@ -6,7 +6,7 @@ import { ConnectionRoutesService } from "../services/connection-routes.service";
 @Component({
   selector: "app-matches",
   templateUrl: "./matches.component.html",
-  styleUrls: ["./matches.component.css"]
+  styleUrls: ["./matches.component.scss"]
 })
 export class MatchesComponent implements OnInit {
   otherTravelId: any;
