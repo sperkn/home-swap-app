@@ -12,12 +12,17 @@
 //     justify-items: center;
 //   }
 // }
+html, body{
+  // min-height:100vh;
+  background-color: $color-background;
+  margin: 0;
+  padding: 0;
+}
 
 .results-container {
-  height: 100%;
   width: 100%;
   background-color: $color-background;
-  padding-top: 40px;
+  padding: 20px 0;
 }
 
 .image-box {
@@ -26,8 +31,7 @@
 }
 
 .results-card {
-  margin: 0 auto;
-  margin-bottom: 40px;
+  margin: 20px auto;
   width: 1200px;
   background-color: $color-white;
   padding: 20px;

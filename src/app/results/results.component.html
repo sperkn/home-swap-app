@@ -1,3 +1,4 @@
+<div class="content-wrapper">
 <app-navbar></app-navbar>
 
 <!-- <div class="results__container" *ngFor="let result of results">
@@ -28,7 +29,11 @@
         <span class="sr-only">Next</span>
       </a>
     </div> -->
-<div class="results-container">
+<div class="no-results" *ngIf="results.length == 0">
+  <h1>No Results yet, try again later.</h1>
+</div>
+
+<div class="results-container" *ngIf="results.length > 0">
 
   <div *ngFor="let result of results; let i = index" class="results-card">
     <div class="image-box">
@@ -109,4 +114,5 @@
     </div>
     </div>
   </div>
+</div>
 </div>
