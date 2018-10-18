@@ -1,7 +1,5 @@
 <app-navbar></app-navbar>
 
-<!-- <button class="" routerLink="/add-home"></button> -->
-
 <main class="dashboard">
   <div class="dashboard__container">
     <div class="sidebar">
@@ -17,7 +15,23 @@
     </header>
 
     <section class="data">
-      Data
+      <div class="data__requests">
+        <div class="data__number" *ngIf="travels.length > 0">{{travels.length}}</div>
+        <div class="data__number" *ngIf="travels.length == 0">{{travels.length}}</div>
+        <h4 class="data__header">Travel Requests</h4>
+      </div>
+
+      <div class="data__connections">
+        <div class="data__number" *ngIf="connections.length > 0">{{connections.length}}</div>
+        <div class="data__number" *ngIf="connections.length == 0">{{connections.length}}</div>
+        <h4 class="data__header">Connections</h4>
+      </div>
+
+      <div *ngIf="homes.length == 0">
+        <div class="data__home">
+          <button class="date__home-btn" routerLink="/add-home">Add home</button>
+        </div>
+      </div>
     </section>
 
     <header class="travel-header">
@@ -25,6 +39,9 @@
     </header>
 
     <section class="travel-results">
+      <div *ngIf="travels.length == 0">
+        <p class="travel-results__no-info">Take the first step on your adventure and create a travel request!</p>
+      </div>
       <!-- Travel Results -->
       <div *ngFor="let travel of travels" class="travel-results__card">
 
@@ -51,7 +68,7 @@
 
         <!-- <a [routerLink]="['../edit-travel', travel._id]">Edit</a> -->
         <div class="travel-results__review">
-          <a class="travel-results__review-link" [routerLink]="['../results', travel._id]">View Results &gt;</a>
+          <a class="travel-results__review-link" [routerLink]="['../results', travel._id]">View Matches &gt;</a>
         </div>
       </div>
     </section>
@@ -61,7 +78,35 @@
     </header>
 
     <section class="connections-results">
-      Connection Results
+      <div *ngIf="connections.length == 0">
+        <p class="connections-results__no-info">Keep reviewing your matches and like away!</p>
+      </div>
+
+      <div *ngFor="let connection of connections">
+        <div *ngIf="connection.active == true ">
+          <div *ngIf="connection.userRequest1.user === userId" class="connections-results__card">
+            <h4 class="connections-results__date">
+              {{connection.userRequest1.beginDate | date }} &mdash; {{connection.userRequest1.endDate | date }}
+            </h4>
+            <p class="connections-results__text">You connected with {{connection.userRequest2.firstName}}!</p>
+            <div class="connections-results__info">
+              <a class="connections-results__info-link" [routerLink]="['/matches', connection.userRequest2._id, connection._id]">View
+                more info &gt;</a>
+            </div>
+          </div>
+
+          <div *ngIf="connection.userRequest2.user === userId" class="connections-results__card">
+            <h4 class="connections-results__date">
+              {{connection.userRequest2.beginDate | date }} &mdash; {{connection.userRequest2.endDate | date }}
+            </h4>
+            <p class="connections-results__text">You connected with {{connection.userRequest1.firstName}}!</p>
+            <div class="connections-results__info">
+              <a class="connections-results__info-link" [routerLink]="['/matches', connection.userRequest1._id, connection._id]">
+                View more info &gt;</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
   </div>
@@ -85,28 +130,7 @@ my home info
 travel requests info
 
 <div *ngIf="homes.length > 0">
-  <div id="my_request_section">
-
-
-    <h3>My Travel Requests</h3>
-
-    <button class="" routerLink="/add-travel"> </button>
-
-    <div *ngFor="let travel of travels">
-
-      <p>Start Date: {{ travel.beginDate | date }} End Date: {{ travel.endDate | date }}</p>
-
-      <div class="pure-u-1-3 grow_flex"><a [routerLink]="['../edit-travel', travel._id]">Edit</a></div>
-      <div class="pure-u-1-3 grow_flex"> <a [routerLink]="['../results', travel._id]">Results</a></div>
-      <div class="pure-u-1-3 grow_flex"> <button (click)="deleteTravel(travel._id)">Delete</button></div>
-
-      <p>Start Date: {{ travel.beginDate | date }} End Date: {{ travel.endDate | date }}
-        <a [routerLink]="['../edit-travel', travel._id]">Edit</a>
-        <a [routerLink]="['../results', travel._id]">Results</a>
-        <button (click)="deleteTravel(travel._id)">Delete</button>
-      </p>
-    </div>
-  </div>
+  
 </div>
 
 <div *ngIf="connections.length > 0">

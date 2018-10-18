@@ -25,19 +25,19 @@
   <form class="form-box">
     <div class="form-row">
       <div class="form-group col-12">
-        <label>Start Date:</label>
+        <label class="form__text">Start Date</label>
         <input type="date" [(ngModel)]="formInfo.beginDate" name="beginDate" class="form-control">
       </div>
     </div>
     <div class="form-row">
       <div class="form-group col-12">
-        <label>End Date:</label>
+        <label class="form__text">End Date</label>
         <input type="date" [(ngModel)]="formInfo.endDate" name="endDate" class="form-control">
       </div>
     </div>
     <div class="form-row">
       <div class="form-group col-12">
-        <label>Home Type:</label>
+        <label class="form__text">Home Type</label>
         <select class="form-control" [(ngModel)]="formInfo.home" name="home">
           <option>House</option>
           <option>Apt</option>
@@ -46,7 +46,7 @@
     </div>
     <div class="form-row">
       <div class="form-group col-12">
-        <label>Setting:</label>
+        <label class="form__text">Setting</label>
         <select class="form-control" [(ngModel)]="formInfo.setting" name="setting">
           <option>Urban</option>
           <option>Suburban</option>
@@ -56,7 +56,7 @@
     </div>
     <div class="form-row">
       <div class="form-group col-12">
-        <label>Landscape:</label>
+        <label class="form__text">Landscape</label>
         <select class="form-control" [(ngModel)]="formInfo.landscape" name="landscape">
           <option>Tropical</option>
           <option>Mountainous</option>
