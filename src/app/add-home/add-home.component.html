@@ -1,14 +1,15 @@
 <app-navbar></app-navbar>
 
 <div class="background">
-  <div>
-    <h3 class="heading">My Homes</h3>
-  </div>
-  <form class="form-box">
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label>Country</label>
-        <select class="form-control" name="country" [(ngModel)]="address.country" required>
+  <div class="home-card">
+    <div>
+      <h3 class="heading">Add Home</h3>
+    </div>
+    <form class="form-box ">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label>Country</label>
+          <select class="form-control" name="country" [(ngModel)]="address.country" required>
             <option>United States</option>
             <option>Afghanistan</option>
             <option>Åland Islands</option>
@@ -257,152 +258,156 @@
             <option>Western Sahara</option>
             <option>Yemen</option>
             <option>Zambia</option>
-            <option>Zimbabwe</option> 
-                 </select>
+            <option>Zimbabwe</option>
+          </select>
+        </div>
+        <div class="form-group col-md-6">
+          <label>Property Type:</label>
+          <select class="form-control" [(ngModel)]="newHome.home" name="home" required>
+            <option>House</option>
+            <option>Apt</option>
+          </select>
+        </div>
       </div>
-      <div class="form-group col-md-6">
-        <label>Property Type:</label>
-        <select class="form-control" [(ngModel)]="newHome.home" name="home" required>
-          <option>House</option>
-          <option>Apt</option>
-        </select>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label>Address</label>
+          <input class="form-control" type="text" name="street" [(ngModel)]="address.street" required />
+        </div>
+        <div class="form-group col-md-2">
+          <label>Bedrooms</label>
+          <select class="form-control" name="bedrooms" [(ngModel)]="newHome.bedrooms" required>
+            <option>01</option>
+            <option>02</option>
+            <option>03</option>
+            <option>04</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label>Beds</label>
+          <select class="form-control" name="beds" [(ngModel)]="newHome.beds" required>
+            <option>01</option>
+            <option>02</option>
+            <option>03</option>
+            <option>04</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label>Baths</label>
+          <select class="form-control" name="baths" [(ngModel)]="newHome.baths" required>>
+            <option>01</option>
+            <option>02</option>
+            <option>03</option>
+            <option>04</option>
+          </select>
+        </div>
       </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label>Address</label>
-        <input class="form-control" type="text" name="street" [(ngModel)]="address.street" required />
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label>City</label>
+          <input class="form-control" type="city" name="city" [(ngModel)]="address.city" required />
+        </div>
+        <div class="form-group col-6">
+          <label>Setting:</label>
+          <select class="form-control" [(ngModel)]="newHome.setting" name="setting" required>
+            <option>Urban</option>
+            <option>Suburban</option>
+            <option>Rural</option>
+          </select>
+        </div>
       </div>
-      <div class="form-group col-md-2">
-        <label>Bedrooms</label>
-        <select class="form-control" name="bedrooms" [(ngModel)]="newHome.bedrooms" required>
-          <option>01</option>
-          <option>02</option>
-          <option>03</option>
-          <option>04</option>
-        </select>
+      <div class="form-row">
+        <div class="form-group col-4">
+          <label>State</label>
+          <select class="form-control" name="state" [(ngModel)]="address.state" required>
+            <option>AL</option>
+            <option>AK</option>
+            <option>AZ</option>
+            <option>AR</option>
+            <option>CA</option>
+            <option>CO</option>
+            <option>CT</option>
+            <option>DE</option>
+            <option>DC</option>
+            <option>FL</option>
+            <option>GA</option>
+            <option>HI</option>
+            <option>ID</option>
+            <option>IL</option>
+            <option>IN</option>
+            <option>IA</option>
+            <option>KS</option>
+            <option>KY</option>
+            <option>LA</option>
+            <option>ME</option>
+            <option>MD</option>
+            <option>MA</option>
+            <option>MI</option>
+            <option>MN</option>
+            <option>MS</option>
+            <option>MO</option>
+            <option>NE</option>
+            <option>NV</option>
+            <option>NH</option>
+            <option>NJ</option>
+            <option>NM</option>
+            <option>NY</option>
+            <option>NC</option>
+            <option>ND</option>
+            <option>OH</option>
+            <option>OK</option>
+            <option>OR</option>
+            <option>PA</option>
+            <option>PR</option>
+            <option>RI</option>
+            <option>SC</option>
+            <option>SD</option>
+            <option>TN</option>
+            <option>TX</option>
+            <option>UT</option>
+            <option>VT</option>
+            <option>VA</option>
+            <option>VI</option>
+            <option>WA</option>
+            <option>WV</option>
+            <option>WI</option>
+            <option>WY</option>
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label>Zip Code</label>
+          <input class="form-control" type="text" name="zipCode" [(ngModel)]="address.zipCode" required />
+        </div>
+        <div class="form-group col-6">
+          <label>Landscape:</label>
+          <select class="form-control" [(ngModel)]="newHome.landscape" name="landscape">
+            <option>Tropical</option>
+            <option>Mountainous</option>
+            <option>City</option>
+            <option>Coastal</option>
+          </select>
+        </div>
       </div>
-      <div class="form-group col-md-2">
-        <label>Beds</label>
-        <select class="form-control" name="beds" [(ngModel)]="newHome.beds" required>
-          <option>01</option>
-          <option>02</option>
-          <option>03</option>
-          <option>04</option>
-        </select>
+      <div class="form-row">
+        <div class="col-12">
+          <label>Description</label>
+          <input class="form-control" type="text" name="description" [(ngModel)]="newHome.description" required />
+        </div>
       </div>
-      <div class="form-group col-md-2">
-        <label>Baths</label>
-        <select class="form-control" name="baths" [(ngModel)]="newHome.baths" required>>
-          <option>01</option>
-          <option>02</option>
-          <option>03</option>
-          <option>04</option>
-        </select>
+      <div class="form-row">
+        <div class="col-12">
+          <br>
+          <label>Images</label>
+          <br>
+          <input type="file" name="file" ng2FileSelect [uploader]="uploader" multiple />
+        </div>
       </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label>City</label>
-        <input class="form-control" type="city" name="city" [(ngModel)]="address.city" required />
+      <div class="form-row">
+        <div class="col-10">
+          <p>Queue length: {{ uploader?.queue?.length }}</p>
+        </div>
+        <button type="button" class="btn btn-primary col-2" (click)="submit()">Save</button>
       </div>
-      <div class="form-group col-6">
-        <label>Setting:</label>
-        <select class="form-control" [(ngModel)]="newHome.setting" name="setting" required>
-          <option>Urban</option>
-          <option>Suburban</option>
-          <option>Rural</option>
-        </select>
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group col-4">
-        <label>State</label>
-        <select class="form-control" name="state" [(ngModel)]="address.state" required>
-          <option>AL</option>
-          <option>AK</option>
-          <option>AZ</option>
-          <option>AR</option>        
-          <option>CA</option>
-          <option>CO</option>
-          <option>CT</option>
-          <option>DE</option>
-          <option>DC</option>
-          <option>FL</option>
-          <option>GA</option>
-          <option>HI</option>
-          <option>ID</option>
-          <option>IL</option>
-          <option>IN</option>
-          <option>IA</option>
-          <option>KS</option>
-          <option>KY</option>
-          <option>LA</option>
-          <option>ME</option>
-          <option>MD</option>
-          <option>MA</option>
-          <option>MI</option>
-          <option>MN</option>
-          <option>MS</option>
-          <option>MO</option>
-          <option>NE</option>
-          <option>NV</option>
-          <option>NH</option>
-          <option>NJ</option>
-          <option>NM</option>
-          <option>NY</option>
-          <option>NC</option>
-          <option>ND</option>
-          <option>OH</option>
-          <option>OK</option>
-          <option>OR</option>
-          <option>PA</option>
-          <option>PR</option>
-          <option>RI</option>
-          <option>SC</option>
-          <option>SD</option>
-          <option>TN</option>
-          <option>TX</option>
-          <option>UT</option>
-          <option>VT</option>
-          <option>VA</option>
-          <option>VI</option>
-          <option>WA</option>
-          <option>WV</option>
-          <option>WI</option>
-          <option>WY</option>
-        </select>
-      </div>
-      <div class="form-group col-md-2">
-        <label>Zip Code</label>
-        <input class="form-control" type="text" name="zipCode" [(ngModel)]="address.zipCode" required />
-      </div>
-      <div class="form-group col-6">
-        <label>Landscape:</label>
-        <select class="form-control" [(ngModel)]="newHome.landscape" name="landscape">
-          <option>Tropical</option>
-          <option>Mountainous</option>
-          <option>City</option>
-          <option>Coastal</option>
-        </select>
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="col-12">
-        <label>Description</label>
-        <input class="form-control" type="text" name="description" [(ngModel)]="newHome.description" required />
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="col-3">
-        <input type="file" name="file" ng2FileSelect [uploader]="uploader" multiple />
-      </div>
-      <div class="col-3">
-        <p>Queue length: {{ uploader?.queue?.length }}</p>
-      </div>
-    </div>
-
-
-    <button type="button" class="btn btn-primary" (click)="submit()">Save</button>
-  </form>
+    </form>
+  </div>
 </div>
