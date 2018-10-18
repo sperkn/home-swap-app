@@ -88,7 +88,7 @@
             <h4 class="connections-results__date">
               {{connection.userRequest1.beginDate | date }} &mdash; {{connection.userRequest1.endDate | date }}
             </h4>
-            <p class="connections-results__text">You connected with {{connection.userRequest2.firstName}}!</p>
+            <p class="connections-results__text">You connected with {{connection.user2.firstName}}!</p>
             <div class="connections-results__info">
               <a class="connections-results__info-link" [routerLink]="['/matches', connection.userRequest2._id, connection._id]">View
                 more info &gt;</a>
@@ -99,7 +99,7 @@
             <h4 class="connections-results__date">
               {{connection.userRequest2.beginDate | date }} &mdash; {{connection.userRequest2.endDate | date }}
             </h4>
-            <p class="connections-results__text">You connected with {{connection.userRequest1.firstName}}!</p>
+            <p class="connections-results__text">You connected with {{connection.user1.firstName}}!</p>
             <div class="connections-results__info">
               <a class="connections-results__info-link" [routerLink]="['/matches', connection.userRequest1._id, connection._id]">
                 View more info &gt;</a>
@@ -111,121 +111,3 @@
 
   </div>
 </main>
-
-<!-- 
-my home info
-<div *ngFor="let home of homes">
-  <div *ngFor="let image of home.images">
-    <span><img [src]="image.url" /></span>
-  </div>
-  <p> {{ home.address.street }} </p>
-  <p> {{ home.address.city}} </p>
-  <p>{{ home.address.state}} </p>
-  <p> {{ home.address.zipCode}} </p>
-  <p> {{ home.address.country}} </p>
-</div>
-
-
-
-travel requests info
-
-<div *ngIf="homes.length > 0">
-  
-</div>
-
-<div *ngIf="connections.length > 0">
-  <h3>My Connections</h3>
-
-  <button class="" routerLink="/add-travel"></button>
-
-  <div *ngFor="let connection of connections">
-    <div *ngIf="connection.active == true ">
-      <div *ngIf="connection.userRequest1.user === userId ">
-        <a [routerLink]="['/matches', connection.userRequest2._id, connection._id]">Start Date:
-          {{connection.userRequest1.beginDate
-          | date }}
-          End Date: {{connection.userRequest1.endDate | date }}</a>
-      </div>
-      <div *ngIf="connection.userRequest2.user === userId ">
-        <a [routerLink]="['/matches', connection.userRequest1._id, connection._id]">Start Date:
-          {{connection.userRequest2.beginDate
-          | date }}
-          End Date: {{connection.userRequest2.endDate | date }}</a>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-
-
-<!-- BEGIN CONNECTIONS SECTION -->
-<!-- <div *ngIf="connections.length > 0">
-  <h3>My Matches</h3>
-  <div class="matches-container">
-    <div *ngFor="let connection of connections">
-      <div *ngIf="connection.active == true ">
-        <div *ngIf="connection.userRequest1.user === userId ">
-          <a [routerLink]="['../matches', connection.userRequest2._id, connection._id]">Start Date:
-            {{connection.userRequest1.beginDate
-            | date }}
-            End Date: {{connection.userRequest1.endDate | date }}</a>
-        </div>
-        <div *ngIf="connection.userRequest2.user === userId ">
-          <a [routerLink]="['../matches', connection.userRequest1._id, connection._id]">Start Date:
-            {{connection.userRequest2.beginDate
-            | date }}
-            End Date: {{connection.userRequest2.endDate | date }}</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-<!-- END CONNECTIONS SECTION -->
-
-<!-- EDWARD's original code -->
-<!-- <h3>My Home</h3> -->
-<!-- <div class="main_container">
-    <div *ngFor="let home of homes">
-      <div *ngFor="let image of home.images">
-        <img [src]="image.url" />
-      </div>
-      <p> {{ home.address.street }} </p>
-      <p> {{ home.address.city}} </p>
-      <p>{{ home.address.state}} </p>
-      <p> {{ home.address.zipCode}} </p>
-      <p> {{ home.address.country}} </p> -->
-<!-- <a [routerLink]="['home']"> View Details </a> -->
-<!-- <a [routerLink]="['edit-home', home._id]">Edit</a>
-    </div> -->
-<!-- <button class="button-success pure-button" routerLink="/add-home">
-      <i class="fas fa-plus-circle"></i>
-      Add Home
-    </button> -->
-<!-- <button class="add_home_button" routerLink="/add-home"><img src="/src/assets/images/addcircleoutline.svg"></button> -->
-<!-- </div> -->
-
-
-
-<!-- 
-<div *ngIf="connections.length > 0">
-  <h3>My Matches</h3>
-  <div class="matches-container">
-    <div *ngFor="let connection of connections">
-      <div *ngIf="connection.active == true ">
-        <div *ngIf="connection.userRequest1.user === userId ">
-          <a [routerLink]="['../matches', connection.userRequest2._id, connection._id]">Start Date:
-            {{connection.userRequest1.beginDate
-            | date }}
-            End Date: {{connection.userRequest1.endDate | date }}</a>
-        </div>
-        <div *ngIf="connection.userRequest2.user === userId ">
-          <a [routerLink]="['../matches', connection.userRequest1._id, connection._id]">Start Date:
-            {{connection.userRequest2.beginDate
-            | date }}
-            End Date: {{connection.userRequest2.endDate | date }}</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->

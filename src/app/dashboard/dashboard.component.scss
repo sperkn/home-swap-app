@@ -18,7 +18,7 @@
 
   &__container {
     display: grid;
-    grid-template-rows: /* repeat(2, 15rem) */ 15rem 17rem /* 7vw */ 10rem minmax(7rem, min-content)/* 7vw */ 10rem minmax(7rem, min-content);
+    grid-template-rows: /* repeat(2, 15rem) */ 15rem 17rem /* 7vw */ 10rem minmax(7rem, min-content)/* 7vw */ 10rem minmax(7rem, min-content) 10rem;
     grid-template-columns:
       [sidebar-start] minmax(
         17rem,
@@ -165,20 +165,20 @@
       // grid-template-rows: 15rem;
       grid-column-gap: 4.5rem;
       grid-row-gap: 6rem;
-      transition: ease-in 1s;
+      transition: transform 1s;
 
       &__card {
         display: grid;
         grid-template-columns: repeat(3, 10rem);
         grid-template-rows: repeat(2, 1fr) .7fr;
         background-color: $color-background-2;
-        border-radius: 5px;
-        box-shadow: 0 .2rem 2rem rgba($color-black, .2);
+        border-radius: 8px;
+        box-shadow: 0 1.2rem 4rem rgba($color-black, 0.15);
         align-content: center;
 
         &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 .5rem 2rem rgba($color-black, .2);
+          transform: scale(1.01) translateY(-1rem);
+          box-shadow: 0 1.6rem 4rem rgba($color-black, .2);
         }
         // grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
       //   grid-template-rows: repeat(3, 7rem);
@@ -233,7 +233,7 @@
         &-link {
           text-decoration: none;
           color: $color-grey-dark-2;
-          font-size: 1.3rem;
+          font-size: 1.4rem;
           justify-self: center;
           align-self: center;
         }
@@ -267,7 +267,7 @@
       grid-template-columns: repeat(auto-fit, minmax(30rem, max-content));
       grid-column-gap: 4.5rem;
       grid-row-gap: 6rem;
-      transition: ease-in 1s;
+      transition: transform 1s;
 
       &__card {
         display: grid;
@@ -275,12 +275,13 @@
         grid-template-rows: repeat(2, 1fr) .7fr;
         background-color: $color-background-2;
         border-radius: 5px;
-        box-shadow: 0 .2rem 2rem rgba($color-black, .2);
+        box-shadow: 0 1.2rem 4rem rgba($color-black, 0.15);
         align-content: center;
+        overflow: hidden;
 
         &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 .5rem 2rem rgba($color-black, .2);
+          transform: scale(1.01) translateY(-1rem);
+          box-shadow: 0 1.6rem 4rem rgba($color-black, .2);
         }
       }
 
@@ -295,6 +296,7 @@
       &__text {
         grid-column: 1 / 4;
         font-size: $default-font-size;
+        padding-left: 1rem;
       }
 
       &__info {
@@ -306,7 +308,8 @@
         &-link {
           text-decoration: none;
           color: $color-grey-dark-2;
-          font-size: 1.3rem;
+          font-size: 1.4rem;
+          padding: .5rem 0;
           justify-self: center;
           align-self: center;
         }

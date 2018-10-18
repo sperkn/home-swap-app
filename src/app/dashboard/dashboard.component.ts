@@ -15,7 +15,6 @@ export class DashboardComponent implements OnInit {
   travels: any = [];
   connections: any = [];
   userId: any;
-  // noData: number=
 
   constructor(
     private travel: TravelRoutesService,
